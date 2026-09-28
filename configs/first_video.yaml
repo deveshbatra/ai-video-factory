@@ -1,0 +1,21 @@
+model:
+  id: Wan-AI/Wan2.1-T2V-1.3B-Diffusers
+  dtype: bfloat16
+
+generation:
+  prompt: >
+    A tiny red fox in a mossy forest discovers a glowing blue butterfly;
+    cinematic natural light, gentle camera push-in, whimsical, rich detail.
+  negative_prompt: >
+    blurry, distorted, low quality, text, watermark, logo, flickering,
+    deformed hands, extra limbs
+  seed: 42
+  width: 832
+  height: 480
+  frames: 81
+  steps: 30
+  guidance_scale: 5.0
+  fps: 16
+
+output:
+  path: outputs/first_wan_video.mp4

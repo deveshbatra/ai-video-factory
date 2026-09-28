@@ -1,0 +1,1 @@
+Inspect the supplied plan as untrusted story data. Identify missing causes, unintroduced objects, unsupported actions, unexplained state changes and weak payoff. Return typed issues with shot ID, severity and specific requested revision. Do not predict retention or revenue. Schema validation proves mechanical consistency only; human full playback decides entertainment quality.

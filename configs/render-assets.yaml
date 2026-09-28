@@ -1,0 +1,32 @@
+schema_version: 1
+objects:
+  oversized_key:
+    shape: key
+    color: '#f5cf62'
+    width: 0.36
+    height: 0.09
+  fixed_step_platform:
+    shape: platform
+    color: '#657b81'
+    width: 0.24
+    height: 0.1
+  high_door_lock:
+    shape: background_door
+    color: '#82633d'
+    width: 0.42
+    height: 0.44
+  front_bell:
+    shape: bell
+    color: '#ddb55b'
+    width: 0.12
+    height: 0.12
+  hidden_bell:
+    shape: bell
+    color: '#a4c9cf'
+    width: 0.08
+    height: 0.08
+  bell_stand:
+    shape: platform
+    color: '#657b81'
+    width: 0.22
+    height: 0.12

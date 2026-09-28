@@ -1,0 +1,1 @@
+{"additionalProperties":false,"properties":{"hypothesis":{"title":"Hypothesis","type":"string"},"id":{"title":"Id","type":"string"},"schema_version":{"const":1,"default":1,"title":"Schema Version","type":"integer"},"status":{"title":"Status","type":"string"}},"required":["id","hypothesis","status"],"title":"Experiment","type":"object"}

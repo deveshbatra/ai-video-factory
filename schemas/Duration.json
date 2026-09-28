@@ -1,0 +1,1 @@
+{"additionalProperties":false,"properties":{"max":{"exclusiveMinimum":0,"title":"Max","type":"number"},"min":{"exclusiveMinimum":0,"title":"Min","type":"number"},"schema_version":{"const":1,"default":1,"title":"Schema Version","type":"integer"}},"required":["min","max"],"title":"Duration","type":"object"}

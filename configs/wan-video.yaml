@@ -1,0 +1,25 @@
+# Wan Video Generation Configuration for "Ganesha's World"
+# Shot 1: The Challenge at Mount Kailash
+
+model:
+  id: "Wan-AI/Wan2.1-T2V-1.3B-Diffusers"
+  revision: "0fad780a534b6463e45facd96134c9f345acfa5b"
+  cache: "./cache"
+
+generation:
+  prompt: >
+    Vibrant traditional Indian 3D animation style. On Mount Kailash, Lord Shiva with serene blue skin 
+    and Goddess Parvati in red and gold robes sit on an ornate lotus throne. In front of them, a young divine child 
+    Ganesha with an elephant head, warm expressive eyes, single broken tusk, small rotund belly, yellow silk dhoti, 
+    and gold crown listens alongside a youthful athletic warrior prince Kartikeya holding a golden spear. 
+    Cinematic lighting, dynamic 3D animation, peaceful atmosphere, camera slow pan forward.
+  seed: 1048291
+  width: 1280
+  height: 720
+  frames: 81
+  fps: 16
+  steps: 50
+  guidance_scale: 5.0
+
+output:
+  directory: "./output/ganesha_shot_01"

@@ -1,0 +1,17 @@
+schema_version: 1
+# Explicit prototype crops. Original SDXL images remain in every review bundle.
+assets:
+  detailed_pixel_art-pip:
+    crop: [0.01, 0.02, 0.13, 0.43]
+    review_note: "Rejected identity: generated hooded human rather than robot; retained only for visual comparison."
+  detailed_pixel_art-moss:
+    crop: [0.01, 0.01, 0.62, 1.0]
+    review_note: Curated the large robot from a multi-view sheet; pending owner review.
+  illustrated_cutout-pip:
+    crop: [0.20, 0.08, 0.80, 1.0]
+    review_note: Central robot extracted from repeated figures; source clips the feet; prototype limitation.
+  illustrated_cutout-moss:
+    crop: [0.0, 0.0, 1.0, 1.0]
+    seed: [0.5, 0.25]
+    keep_all_foreground: true
+    review_note: Single teal robot; neutral background removed; pending owner review.

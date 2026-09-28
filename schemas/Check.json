@@ -1,0 +1,1 @@
+{"additionalProperties":false,"properties":{"name":{"title":"Name","type":"string"},"reason":{"title":"Reason","type":"string"},"schema_version":{"const":1,"default":1,"title":"Schema Version","type":"integer"},"status":{"enum":["pass","fail","unavailable"],"title":"Status","type":"string"}},"required":["name","status","reason"],"title":"Check","type":"object"}

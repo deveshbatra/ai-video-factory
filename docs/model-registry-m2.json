@@ -1,0 +1,239 @@
+[
+  {
+    "repo": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "files": [
+      {
+        "path": "config.json",
+        "bytes": 728,
+        "lfs": null
+      },
+      {
+        "path": "generation_config.json",
+        "bytes": 239,
+        "lfs": null
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 1671853,
+        "lfs": null
+      },
+      {
+        "path": "model-00001-of-00005.safetensors",
+        "bytes": 3996250744,
+        "lfs": {
+          "sha256": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f",
+          "size": 3996250744,
+          "pointerSize": 135
+        }
+      },
+      {
+        "path": "model-00002-of-00005.safetensors",
+        "bytes": 3993160032,
+        "lfs": {
+          "sha256": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282",
+          "size": 3993160032,
+          "pointerSize": 135
+        }
+      },
+      {
+        "path": "model-00003-of-00005.safetensors",
+        "bytes": 3959604768,
+        "lfs": {
+          "sha256": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836",
+          "size": 3959604768,
+          "pointerSize": 135
+        }
+      },
+      {
+        "path": "model-00004-of-00005.safetensors",
+        "bytes": 3187841392,
+        "lfs": {
+          "sha256": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a",
+          "size": 3187841392,
+          "pointerSize": 135
+        }
+      },
+      {
+        "path": "model-00005-of-00005.safetensors",
+        "bytes": 1244659840,
+        "lfs": {
+          "sha256": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff",
+          "size": 1244659840,
+          "pointerSize": 135
+        }
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "bytes": 32878,
+        "lfs": null
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 11422654,
+        "lfs": {
+          "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "size": 11422654,
+          "pointerSize": 133
+        }
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 9732,
+        "lfs": null
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 2776833,
+        "lfs": null
+      }
+    ],
+    "download_bytes": 16397431693,
+    "licence": "Apache-2.0",
+    "dtype": "bfloat16",
+    "cache": "models/svf",
+    "runtime": "ai-video-factory:wan@sha256:pending-local-inspect",
+    "verified": "2026-09-11",
+    "benchmark_status": "not_run",
+    "usage_review": "Qwen Apache-2.0; SDXL OpenRAIL++ restrictions apply; original non-personal fictional artwork only",
+    "patterns": [
+      "*.json",
+      "*.txt",
+      "*.safetensors"
+    ]
+  },
+  {
+    "repo": "stabilityai/stable-diffusion-xl-base-1.0",
+    "revision": "462165984030d82259a11f4367a4eed129e94a7b",
+    "files": [
+      {
+        "path": "model_index.json",
+        "bytes": 609,
+        "lfs": null
+      },
+      {
+        "path": "scheduler/scheduler_config.json",
+        "bytes": 479,
+        "lfs": null
+      },
+      {
+        "path": "text_encoder/config.json",
+        "bytes": 565,
+        "lfs": null
+      },
+      {
+        "path": "text_encoder/model.fp16.safetensors",
+        "bytes": 246144152,
+        "lfs": {
+          "sha256": "660c6f5b1abae9dc498ac2d21e1347d2abdb0cf6c0c0c8576cd796491d9a6cdd",
+          "size": 246144152,
+          "pointerSize": 134
+        }
+      },
+      {
+        "path": "text_encoder_2/config.json",
+        "bytes": 575,
+        "lfs": null
+      },
+      {
+        "path": "text_encoder_2/model.fp16.safetensors",
+        "bytes": 1389382176,
+        "lfs": {
+          "sha256": "ec310df2af79c318e24d20511b601a591ca8cd4f1fce1d8dff822a356bcdb1f4",
+          "size": 1389382176,
+          "pointerSize": 135
+        }
+      },
+      {
+        "path": "tokenizer/merges.txt",
+        "bytes": 524619,
+        "lfs": null
+      },
+      {
+        "path": "tokenizer/special_tokens_map.json",
+        "bytes": 472,
+        "lfs": null
+      },
+      {
+        "path": "tokenizer/tokenizer_config.json",
+        "bytes": 737,
+        "lfs": null
+      },
+      {
+        "path": "tokenizer/vocab.json",
+        "bytes": 1059962,
+        "lfs": null
+      },
+      {
+        "path": "tokenizer_2/merges.txt",
+        "bytes": 524619,
+        "lfs": null
+      },
+      {
+        "path": "tokenizer_2/special_tokens_map.json",
+        "bytes": 460,
+        "lfs": null
+      },
+      {
+        "path": "tokenizer_2/tokenizer_config.json",
+        "bytes": 725,
+        "lfs": null
+      },
+      {
+        "path": "tokenizer_2/vocab.json",
+        "bytes": 1059962,
+        "lfs": null
+      },
+      {
+        "path": "unet/config.json",
+        "bytes": 1680,
+        "lfs": null
+      },
+      {
+        "path": "unet/diffusion_pytorch_model.fp16.safetensors",
+        "bytes": 5135149760,
+        "lfs": {
+          "sha256": "83e012a805b84c7ca28e5646747c90a243c65c8ba4f070e2d7ddc9d74661e139",
+          "size": 5135149760,
+          "pointerSize": 135
+        }
+      },
+      {
+        "path": "vae/config.json",
+        "bytes": 642,
+        "lfs": null
+      },
+      {
+        "path": "vae/diffusion_pytorch_model.fp16.safetensors",
+        "bytes": 167335342,
+        "lfs": {
+          "sha256": "bcb60880a46b63dea58e9bc591abe15f8350bde47b405f9c38f4be70c6161e68",
+          "size": 167335342,
+          "pointerSize": 134
+        }
+      }
+    ],
+    "download_bytes": 6941187536,
+    "licence": "OpenRAIL++",
+    "dtype": "float16",
+    "cache": "models/svf",
+    "runtime": "ai-video-factory:wan@sha256:pending-local-inspect",
+    "verified": "2026-09-11",
+    "benchmark_status": "not_run",
+    "usage_review": "Qwen Apache-2.0; SDXL OpenRAIL++ restrictions apply; original non-personal fictional artwork only",
+    "patterns": [
+      "model_index.json",
+      "scheduler/*.json",
+      "tokenizer/*",
+      "tokenizer_2/*",
+      "text_encoder/config.json",
+      "text_encoder/model.fp16.safetensors",
+      "text_encoder_2/config.json",
+      "text_encoder_2/model.fp16.safetensors",
+      "unet/config.json",
+      "unet/diffusion_pytorch_model.fp16.safetensors",
+      "vae/config.json",
+      "vae/diffusion_pytorch_model.fp16.safetensors"
+    ]
+  }
+]

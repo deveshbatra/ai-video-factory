@@ -1,0 +1,149 @@
+schema_version: 1
+hook: How can they turn a key neither can use alone?
+causal_explanation: Pip can stand on the fixed step and guide the lock, but the key
+  stays on the floor during Pip's strained attempt. Moss lifts it but is too low to
+  guide it. Pip climbs the established step while Moss supports the key, then they
+  open the door and walk through together.
+ending: The supported key reaches the lock, the door opens, and both friends enter
+  together.
+initial_state:
+  objects:
+    pip:
+      x: 0.43
+      y: 0.78
+      pose: curious
+    moss:
+      x: 0.14
+      y: 0.86
+      pose: neutral
+    oversized_key:
+      x: 0.33
+      y: 0.86
+      pose: neutral
+    fixed_step_platform:
+      x: 0.45
+      y: 0.88
+      pose: fixed
+    high_door_lock:
+      x: 0.57
+      y: 0.88
+      pose: locked
+  active_rules:
+  - key_requires_strength
+  - lock_requires_guidance
+  - step_is_fixed
+shots:
+- id: shot1-heavy
+  duration_seconds: 5
+  purpose: Pip tries to lift the enormous visible key; it stays on the floor.
+  camera: wide
+  actions:
+  - kind: move
+    actor: pip
+    x: 0.33
+    y: 0.86
+  - kind: pose
+    actor: pip
+    value: strained
+  - kind: move
+    actor: pip
+    x: 0.7
+    y: 0.86
+  - kind: sound_cue
+    actor: pip
+    value: effort
+  keyframe_prompt: Small amber robot leaning with effort over a huge brass key that
+    stays on the floor; fixed step and locked door visible.
+- id: shot2-low
+  duration_seconds: 5
+  purpose: Moss lifts the key but cannot guide it into the high lock alone.
+  camera: wide
+  actions:
+  - kind: pick_up
+    actor: moss
+    target: oversized_key
+  - kind: carry
+    actor: moss
+    target: oversized_key
+    x: 0.32
+    y: 0.86
+  - kind: look
+    actor: moss
+    target: high_door_lock
+    value: upward
+  - kind: pose
+    actor: moss
+    value: strained
+  - kind: sound_cue
+    actor: moss
+    value: heavy_lift
+  keyframe_prompt: Sturdy teal robot holds the brass key, looks up at the high lock
+    and struggles to align it.
+- id: shot3-step
+  duration_seconds: 5
+  purpose: Pip notices the established step and climbs it to guide the key.
+  camera: wide
+  actions:
+  - kind: look
+    actor: pip
+    target: fixed_step_platform
+    value: curious
+  - kind: move
+    actor: pip
+    x: 0.45
+    y: 0.78
+  - kind: pose
+    actor: pip
+    value: determined
+  - kind: sound_cue
+    actor: pip
+    value: idea
+  keyframe_prompt: Amber robot stands on the visible fixed stone step and reaches
+    toward the lock; teal friend keeps supporting the key.
+- id: shot4-together
+  duration_seconds: 6
+  purpose: Moss supports the key at lock height while Pip guides it from the step.
+  camera: wide
+  actions:
+  - kind: carry
+    actor: moss
+    target: oversized_key
+    x: 0.5
+    y: 0.86
+  - kind: move
+    actor: pip
+    x: 0.49
+    y: 0.78
+  - kind: pose
+    actor: pip
+    value: determined
+  - kind: sound_cue
+    actor: pip
+    value: key_turn
+  keyframe_prompt: Teal robot supports a long brass key, amber robot on the step guides
+    its teeth into the lock, clearly shared effort.
+- id: shot5-through
+  duration_seconds: 5
+  purpose: The key opens the door and both friends walk into the doorway together.
+  camera: wide
+  actions:
+  - kind: change_mechanism_state
+    actor: pip
+    target: high_door_lock
+    value: open
+  - kind: pose
+    actor: pip
+    value: happy
+  - kind: move
+    actor: pip
+    x: 0.57
+    y: 0.84
+  - kind: move
+    actor: moss
+    x: 0.62
+    y: 0.84
+  - kind: sound_cue
+    actor: moss
+    value: payoff
+  keyframe_prompt: Open workshop doorway, two happy original robot friends enter together
+    with the key still supported.

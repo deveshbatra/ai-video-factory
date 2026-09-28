@@ -1,0 +1,60 @@
+schema_version: 1
+images:
+- id: ganesha
+  prompt: Respectful Indian mythological storybook animation, sculpted rounded forms,
+    expressive restrained faces, hand-painted textile details, warm sunrise rim light,
+    saffron, teal and sandstone palette, cinematic depth, no photorealism. Ganesha,
+    elephant-headed youthful deity, warm peach skin, broad elephant ears, one trunk
+    curling toward his own left, rounded belly, exactly two arms in this selected
+    child-story depiction, saffron dhoti with red waistband, small plain gold crown,
+    gold wrist cuffs, barefoot. No carried weapons. Keep the same tusk silhouette
+    in every shot. One full-body figure, front three-quarter view, relaxed neutral
+    pose, all feet and crown inside the frame, plain warm ivory studio background,
+    no scenery, no other figures.
+  negative_prompt: photograph, photorealistic, text, watermark, logo, collage, multiple
+    views, duplicate figure, cropped head, cropped feet, malformed hands, extra fingers,
+    modern clothing, horror
+- id: kartikeya
+  prompt: Respectful Indian mythological storybook animation, sculpted rounded forms,
+    expressive restrained faces, hand-painted textile details, warm sunrise rim light,
+    saffron, teal and sandstone palette, cinematic depth, no photorealism. Kartikeya,
+    youthful deity with one human face and exactly two arms in this selected depiction,
+    warm brown skin, black hair, slender athletic build, teal dhoti, short red shoulder
+    sash, small gold crown, barefoot; calm courageous expression. Rides one blue-green
+    peacock; no weapons in this adaptation. One full-body figure, front three-quarter
+    view, relaxed neutral pose, all feet and crown inside the frame, plain warm ivory
+    studio background, no scenery, no other figures.
+  negative_prompt: photograph, photorealistic, text, watermark, logo, collage, multiple
+    views, duplicate figure, cropped head, cropped feet, malformed hands, extra fingers,
+    modern clothing, horror
+- id: shiva
+  prompt: Respectful Indian mythological storybook animation, sculpted rounded forms,
+    expressive restrained faces, hand-painted textile details, warm sunrise rim light,
+    saffron, teal and sandstone palette, cinematic depth, no photorealism. Shiva,
+    serene adult deity, ash-blue skin, black hair in a high topknot with a small crescent
+    moon, three horizontal white forehead lines, rudraksha necklace, simple ochre
+    lower garment, exactly two visible arms, seated cross-legged. Keep a dignified
+    calm expression. One full-body figure, front three-quarter view, relaxed neutral
+    pose, all feet and crown inside the frame, plain warm ivory studio background,
+    no scenery, no other figures.
+  negative_prompt: photograph, photorealistic, text, watermark, logo, collage, multiple
+    views, duplicate figure, cropped head, cropped feet, malformed hands, extra fingers,
+    modern clothing, horror
+- id: parvati
+  prompt: Respectful Indian mythological storybook animation, sculpted rounded forms,
+    expressive restrained faces, hand-painted textile details, warm sunrise rim light,
+    saffron, teal and sandstone palette, cinematic depth, no photorealism. Parvati,
+    serene adult goddess, warm brown skin, long black hair partly covered by a red
+    sari with a gold border, green blouse, small red bindi, modest gold jewelry, exactly
+    two arms, seated beside Shiva. Warm attentive expression. One full-body figure,
+    front three-quarter view, relaxed neutral pose, all feet and crown inside the
+    frame, plain warm ivory studio background, no scenery, no other figures.
+  negative_prompt: photograph, photorealistic, text, watermark, logo, collage, multiple
+    views, duplicate figure, cropped head, cropped feet, malformed hands, extra fingers,
+    modern clothing, horror
+generation:
+  width: 1024
+  height: 1024
+  steps: 30
+  guidance_scale: 6.5
+seed: 365

@@ -1,0 +1,103 @@
+# Proposed schema. Codex must implement and validate it before these settings run.
+schema_version: 1
+project:
+  name: spark-video-factory
+  mode: development                 # development | production; production rejects mocks
+  timezone: Europe/London
+  output_root: ./runs
+  database_path: ./state/studio.sqlite3
+  model_cache: ./models             # may be mapped to existing Spark cache
+  asset_root: ./assets
+
+providers:
+  text:
+    adapter: local_transformers
+    model_id: Qwen/Qwen3-8B
+    revision: null                  # doctor/setup must resolve an exact revision
+    enabled: false                 # enable after registry and runtime verification
+  image:
+    adapter: local_diffusers
+    model_id: stabilityai/stable-diffusion-xl-base-1.0
+    revision: null
+    enabled: false
+  video:
+    adapter: wan
+    model_id: Wan-AI/Wan2.2-TI2V-5B
+    revision: null
+    enabled: false
+    capability_profile: null       # resolved by benchmark; no guessed universal settings
+  controlled:
+    adapter: scene_interpreter
+    enabled: true
+  audio:
+    adapter: procedural_and_licensed
+    speech_enabled: false
+  visual_critic:
+    enabled: false                 # deterministic checks + human playback initially
+
+production:
+  primary_renderer: controlled
+  allow_i2v: false                  # benchmark before selecting a production profile
+  paid_generation_allowed: false
+  max_shots_per_episode: 7
+  max_candidates_per_shot: 3        # includes first generation and all creative variants
+  max_schema_repairs: 2
+  max_infrastructure_retries: 2
+  max_oom_fallbacks: 1              # also counts within candidate/attempt budget
+  storyboard_review_required: true
+  final_review_required: true
+  default_seed: 42                 # traceability, not a quality guarantee
+
+delivery:
+  width: 1080
+  height: 1920
+  fps: 24
+  video_codec: h264
+  audio_codec: aac
+  preserve_native_render_metadata: true
+  captions:
+    enabled: false
+    sidecar: true
+    safe_area_profile: vertical_default  # implement editable, previewed margins
+
+resources:
+  gpu_concurrency: 1
+  cpu_workers: 2
+  min_available_system_ram_gib: 20   # provisional admission reserve, tune after measurement
+  min_free_disk_gib: 100
+  gpu_job_timeout_minutes: 60       # provisional upper bound, not a runtime estimate
+  lease_seconds: 120
+  heartbeat_seconds: 20
+  downloads:
+    enabled: false
+    max_total_gib: 150              # provisional cap; report actual selected revision sizes
+
+nightly:
+  enabled: false
+  start_local: '23:00'
+  stop_local: '07:00'
+  max_wall_hours: 8
+  max_gpu_hours: 6
+  max_episodes: 3                   # cap, not a throughput promise
+  stop_admitting_before_end_minutes: 30
+  finish_inflight_within_hard_deadline: true
+
+costs:
+  currency: GBP
+  max_external_generation_spend_per_run: 0
+  electricity_gbp_per_kwh: null     # enter actual tariff; null keeps costs unknown
+  operator_gbp_per_hour: null       # optional opportunity-cost assumption
+  hardware_allocation_gbp_per_episode: null
+  energy_source: unavailable        # wall_meter | estimate | unavailable
+
+publishing:
+  enabled: false
+  primary_platform: youtube
+  upload_default_visibility: private
+  require_explicit_publish_action: true
+  platforms_export_only: [instagram, facebook, tiktok, snapchat]
+
+analytics:
+  input: csv
+  snapshot_hours_after_publication: [24, 168]
+  missing_metrics: null

@@ -1,0 +1,13 @@
+annotated-types==0.8.0
+imageio-ffmpeg==0.6.0
+iniconfig==2.3.0
+packaging==26.3
+pillow==11.3.0
+pluggy==1.6.0
+pydantic==2.11.9
+pydantic_core==2.33.2
+pytest==8.1.1
+PyYAML==6.0.2
+ruff==0.12.11
+typing-inspection==0.4.4
+typing_extensions==4.16.0

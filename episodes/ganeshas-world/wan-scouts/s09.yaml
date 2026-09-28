@@ -1,0 +1,41 @@
+schema_version: 1
+model:
+  id: Wan-AI/Wan2.1-T2V-1.3B-Diffusers
+  revision: 0fad780a534b6463e45facd96134c9f345acfa5b
+  cache: models/huggingface/hub
+  dtype: bfloat16
+  vae_dtype: float32
+generation:
+  prompt: Respectful Indian mythological storybook animation, sculpted rounded forms,
+    expressive restrained faces, hand-painted textile details, warm sunrise rim light,
+    saffron, teal and sandstone palette, cinematic depth, no photorealism. Ganesha,
+    elephant-headed youthful deity, warm peach skin, broad elephant ears, one trunk
+    curling toward his own left, rounded belly, exactly two arms in this selected
+    child-story depiction, saffron dhoti with red waistband, small plain gold crown,
+    gold wrist cuffs, barefoot. No carried weapons. Keep the same tusk silhouette
+    in every shot. Shiva, serene adult deity, ash-blue skin, black hair in a high
+    topknot with a small crescent moon, three horizontal white forehead lines, rudraksha
+    necklace, simple ochre lower garment, exactly two visible arms, seated cross-legged.
+    Keep a dignified calm expression. Parvati, serene adult goddess, warm brown skin,
+    long black hair partly covered by a red sari with a gold border, green blouse,
+    small red bindi, modest gold jewelry, exactly two arms, seated beside Shiva. Warm
+    attentive expression. Ganesha is seated before his parents, the single mango already
+    resting in his cupped hands. The pedestal is visibly empty. Parvati gives a small
+    blessing gesture while Ganesha gazes at the mango, then up at his parents. Hold
+    the warm family composition; exactly one mango remains in Ganesha’s hands. One
+    continuous shot. Stable anatomy and costumes. No speech or lip movement.
+  negative_prompt: blurry, distorted, text, watermark, logo, flickering, extra limbs,
+    unnatural movement, static image
+  seed: 374
+  width: 480
+  height: 832
+  frames: 81
+  fps: 16
+  steps: 30
+  guidance_scale: 5.0
+output:
+  directory: outputs/ganeshas-world/scouts/s09
+runtime:
+  timeout_seconds: 3600
+  min_free_disk_gib: 20
+  min_available_ram_gib: 20

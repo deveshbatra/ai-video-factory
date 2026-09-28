@@ -1,0 +1,33 @@
+schema_version: 1
+episode_id: ep002-the-echo-bell
+series_id: odd-rules-working-title
+series_version: 1
+status: proposed
+content_family: mystery
+original_brief: Pip taps a bell and hears two notes. Moss notices a loose little bell
+  behind the first. They separate the bells, test each sound, then ring both together
+  deliberately.
+viewer_question: Why does one bell make two notes?
+payoff: The hidden second bell explains the echo.
+duration_seconds:
+  min: 20
+  max: 30
+language: wordless
+characters:
+- pip
+- moss
+required_props:
+- front_bell
+- hidden_bell
+- bell_stand
+constraints:
+- Both bells remain visible once revealed
+- The second bell causes the extra note
+suggested_renderer: controlled
+i2v_candidate_shots:
+- reaction_closeup
+- door_open_reveal
+experiment:
+  id: pilot-mystery-001
+  hypothesis: A fair mechanical reveal is readable without speech
+  status: untested

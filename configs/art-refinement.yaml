@@ -1,0 +1,9 @@
+schema_version: 1
+reason: Initial character candidates were multi-view sheets and human-like figures; refine one illustrated look into single robot cutouts.
+images:
+  - id: illustrated_cutout-pip
+    prompt: 'Gouache illustration of ONE small cute brass robot. Amber enamel body, round expressive eyes, long thin mechanical arms, two jointed legs. Full body, large centered subject. Pure white empty background. One robot only.'
+    negative_prompt: 'human, person, clothing, hood, dress, character sheet, multiple views, grid, collage, duplicate, text, watermark, scenery'
+  - id: illustrated_cutout-moss
+    prompt: 'Gouache illustration of ONE friendly squat teal robot. Broad strong mechanical arms, short sturdy legs, round expressive eyes, rounded turquoise metal body. Full body, large centered subject. Pure white empty background. One robot only.'
+    negative_prompt: 'human, person, clothing, hood, dress, character sheet, multiple views, grid, collage, duplicate, text, watermark, scenery'

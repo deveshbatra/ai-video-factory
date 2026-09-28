@@ -1,0 +1,1 @@
+{"additionalProperties":false,"properties":{"id":{"pattern":"^[a-zA-Z0-9_-]+$","title":"Id","type":"string"},"negative_prompt":{"default":"","title":"Negative Prompt","type":"string"},"prompt":{"title":"Prompt","type":"string"},"schema_version":{"const":1,"default":1,"title":"Schema Version","type":"integer"}},"required":["id","prompt"],"title":"ImageSpec","type":"object"}

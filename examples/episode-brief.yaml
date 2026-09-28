@@ -1,0 +1,30 @@
+schema_version: 1
+episode_id: ep001-the-heavy-key
+series_id: odd-rules-working-title
+series_version: 1
+status: proposed
+content_family: cooperation
+original_brief: >-
+  A small mechanical character can reach a high door lock but cannot lift its
+  enormous key. A friend can lift the key but cannot reach the lock. Both try
+  alone before working together. The key, step platform and door are visible
+  from the opening. The stronger friend supports the key at platform height;
+  the other guides it into the lock. The door opens and both leave together.
+viewer_question: How can they turn a key neither can use alone?
+payoff: Their complementary abilities solve the problem together.
+duration_seconds: {min: 20, max: 30}
+language: wordless
+characters: [pip, moss]
+required_props: [oversized_key, fixed_step_platform, high_door_lock]
+constraints:
+  - establish_relative_strength_and_reach_through_visible_attempts
+  - show_key_and_platform_before_the_solution
+  - keep_the_key_supported_during_the_handoff
+  - no_unintroduced_ladder_or_flying_ability
+  - end_with_both_characters_through_the_door
+suggested_renderer: controlled
+i2v_candidate_shots: [reaction_closeup, door_open_reveal]
+experiment:
+  id: pilot-cooperation-001
+  hypothesis: A legible complementary-skills payoff makes the characters memorable.
+  status: untested

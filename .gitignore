@@ -1,0 +1,19 @@
+models/
+outputs/
+runs/
+state/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+configs/local.yaml
+*.DS_Store
+
+
+# Spark Video Factory generated development/runtime artifacts
+assets/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/

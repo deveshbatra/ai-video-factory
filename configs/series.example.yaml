@@ -1,0 +1,49 @@
+schema_version: 1
+series_id: odd-rules-working-title
+version: 1
+status: draft                      # user has not approved the pilot's visual identity
+audience_hypothesis: general_audience_visual_puzzle_comedy
+language: wordless
+packaging_language: en
+duration_seconds: {min: 20, max: 35}
+content_families: [cooperation, competition, mystery]
+art_direction:
+  selected: null
+  audition: [detailed_pixel_art, illustrated_cutout]
+  requirements:
+    - expressive_distinct_silhouettes
+    - readable_action_at_phone_size
+    - consistent_world_and_props
+    - deliberately_staged_camera_and_lighting
+characters:
+  - id: pip
+    role: impulsive_experimenter
+    appearance: warm_amber_small_mechanical_character
+    approved_asset_ids: []
+  - id: moss
+    role: observant_practical_friend
+    appearance: teal_small_mechanical_character
+    approved_asset_ids: []
+world_rules:
+  - mechanical_actions_have_visible_causes
+  - props_persist_until_explicitly_moved
+  - solutions_use_previously_established_objects_and_rules
+  - no_character_gains_an_unintroduced_ability
+allowed_actions:
+  - move
+  - look
+  - pose
+  - pick_up
+  - carry
+  - place
+  - activate_switch
+  - change_mechanism_state
+  - camera_move
+  - cut
+  - sound_cue
+creative_review:
+  early_viewer_question: required
+  genuine_payoff: required
+  loop: optional
+  unexpected_unintroduced_objects: reject
+  colour_or_seed_variant_as_new_episode: reject

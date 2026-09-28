@@ -1,0 +1,565 @@
+schema_version: 1
+episode_id: ganeshas-world
+title: Ganesha’s World
+authorship: Original Codex-authored screenplay based on a traditional story; not generated
+  by Qwen or transcribed from the named anthology.
+source:
+  url: https://www.venkateswaratemple.org/Festivals/GaneshChaturthi.pdf
+  edition_status: User accepted this story choice; exact anthology edition not supplied.
+  adaptation_notes:
+  - Follows the three-circuit fruit-prize variant.
+  - Golden mango, dialogue-free performance, staging and final award ellipsis are
+    editorial choices.
+  - Two-arm Ganesha and single-faced Kartikeya are selected storybook designs, not
+    claims that other iconography is incorrect.
+duration_seconds: 45
+language: en
+style: Respectful Indian mythological storybook animation, sculpted rounded forms,
+  expressive restrained faces, hand-painted textile details, warm sunrise rim light,
+  saffron, teal and sandstone palette, cinematic depth, no photorealism.
+characters:
+  ganesha: Ganesha, elephant-headed youthful deity, warm peach skin, broad elephant
+    ears, one trunk curling toward his own left, rounded belly, exactly two arms in
+    this selected child-story depiction, saffron dhoti with red waistband, small plain
+    gold crown, gold wrist cuffs, barefoot. No carried weapons. Keep the same tusk
+    silhouette in every shot.
+  kartikeya: Kartikeya, youthful deity with one human face and exactly two arms in
+    this selected depiction, warm brown skin, black hair, slender athletic build,
+    teal dhoti, short red shoulder sash, small gold crown, barefoot; calm courageous
+    expression. Rides one blue-green peacock; no weapons in this adaptation.
+  shiva: Shiva, serene adult deity, ash-blue skin, black hair in a high topknot with
+    a small crescent moon, three horizontal white forehead lines, rudraksha necklace,
+    simple ochre lower garment, exactly two visible arms, seated cross-legged. Keep
+    a dignified calm expression.
+  parvati: Parvati, serene adult goddess, warm brown skin, long black hair partly
+    covered by a red sari with a gold border, green blouse, small red bindi, modest
+    gold jewelry, exactly two arms, seated beside Shiva. Warm attentive expression.
+world:
+  id: kailash-terrace
+  description: Open sandstone terrace on Mount Kailash, snowy peaks distant, sunrise
+    from upper left, two seated parents on a low central oval dais, one low mango
+    pedestal front-right. No modern buildings, text or crowd.
+  positions: Shiva screen left of Parvati in frontal shots. Never swap their seats.
+    Departing Kartikeya moves left-to-right. The camera does not mirror any shot.
+delivery:
+  width: 576
+  height: 1024
+  fps: 16
+  shot_source_frames: 81
+  shot_delivered_frames: 80
+  trim: 'Keep source frames 0–79. Drop only final frame 80: each source 5.0625s becomes
+    5.000s. No interpolation, retiming or automatic crop.'
+  captions: Editorial overlay only; 2 lines maximum, x=8–82%, y=72–82%; avoid bottom/right
+    platform UI. Reposition only with recorded edit if faces overlap.
+control:
+  route: 'Clockwise as seen from overhead: front(bottom) -> image left -> behind(top)
+    -> image right -> front. Parents stay on walker’s right.'
+  orbit_normalized_points:
+  - - 0.5
+    - 0.76
+  - - 0.24
+    - 0.51
+  - - 0.5
+    - 0.29
+  - - 0.76
+    - 0.51
+  - - 0.5
+    - 0.76
+  orbit_note: Points are screen-space blocking guides; rear pass must be occluded
+    behind seated parents. This is not executable path conditioning in the current
+    Wan adapter.
+  priority:
+  - Character and iconographic consistency
+  - Exactly three readable circuits
+  - Clear cause and payoff
+  - Natural motion
+  - Additional detail
+  generation_rules:
+  - One primary action per shot; no whole-story prompt.
+  - Lock approved keyframes before I2V. A shared seed is not an identity lock.
+  - T2V renders are motion auditions, not reference-conditioned finals.
+  - Do not use negative extra limbs to erase deliberately selected iconography.
+  - Never silently replace missing actions with still-image pans.
+audio:
+  voice: Warm measured English narration, original recording preferred; no imitation
+    of a known actor. No TTS model is installed/approved for this episode.
+  performance: Offscreen narrator, around 115–140 words/minute inside each cue; record
+    each cue separately and preserve pauses. No lip sync.
+  music: Original or explicitly licensed gentle plucked strings and soft drone; no
+    borrowed film score or claimed sacred chant.
+  cues:
+  - time: 0.2
+    cue: one soft bell
+  - time: 6
+    cue: two soft wing sweeps
+  - time: 15
+    cue: quiet footsteps under three circuits
+  - time: 30
+    cue: music thins for meaning
+  - time: 42
+    cue: gentle harmonic resolution
+  mix: Target -16 LUFS integrated and <= -1 dBTP, measure after final mix; duck music
+    beneath narration. Values are targets, not measurements.
+budgets:
+  paid_generation_gbp: 0
+  max_candidates_per_shot: 2
+  gpu_concurrency: 1
+  automatic_publishing: false
+production_status:
+  reference_images: pending local SDXL audition
+  i2v: 'blocked: no supported reference-conditioned adapter/checkpoint yet'
+  voice: pending original recording
+  final_video: not_generated
+shots:
+- id: s01
+  start: 0
+  end: 5
+  title: The challenge
+  cast:
+  - ganesha
+  - kartikeya
+  - shiva
+  - parvati
+  camera: wide
+  opening_state: A single golden mango rests on a low stone pedestal; both brothers
+    stand before their seated parents.
+  primary_action: Parvati gestures once from the mango toward the open sky; the brothers
+    follow her gaze.
+  closing_state: The mango stays on its pedestal; Kartikeya turns toward his peacock
+    at screen right.
+  narration: 'A golden mango. The challenge: circle the world three times.'
+  events:
+  - start: 0
+    end: 1
+    action: Hold the mango in the lower foreground; show both brothers and both parents
+      clearly.
+  - start: 1
+    end: 3
+    action: Parvati raises her right hand toward the horizon; mango remains untouched.
+  - start: 3
+    end: 5
+    action: Kartikeya looks toward the peacock; Ganesha looks up thoughtfully.
+  keyframe_prompt: Respectful Indian mythological storybook animation, sculpted rounded
+    forms, expressive restrained faces, hand-painted textile details, warm sunrise
+    rim light, saffron, teal and sandstone palette, cinematic depth, no photorealism.
+    Ganesha, elephant-headed youthful deity, warm peach skin, broad elephant ears,
+    one trunk curling toward his own left, rounded belly, exactly two arms in this
+    selected child-story depiction, saffron dhoti with red waistband, small plain
+    gold crown, gold wrist cuffs, barefoot. No carried weapons. Keep the same tusk
+    silhouette in every shot. Kartikeya, youthful deity with one human face and exactly
+    two arms in this selected depiction, warm brown skin, black hair, slender athletic
+    build, teal dhoti, short red shoulder sash, small gold crown, barefoot; calm courageous
+    expression. Rides one blue-green peacock; no weapons in this adaptation. Shiva,
+    serene adult deity, ash-blue skin, black hair in a high topknot with a small crescent
+    moon, three horizontal white forehead lines, rudraksha necklace, simple ochre
+    lower garment, exactly two visible arms, seated cross-legged. Keep a dignified
+    calm expression. Parvati, serene adult goddess, warm brown skin, long black hair
+    partly covered by a red sari with a gold border, green blouse, small red bindi,
+    modest gold jewelry, exactly two arms, seated beside Shiva. Warm attentive expression.
+    A single golden mango rests on a low stone pedestal; both brothers stand before
+    their seated parents.
+  motion_prompt: Parvati gestures once from the mango toward the open sky; the brothers
+    follow her gaze. The mango stays on its pedestal; Kartikeya turns toward his peacock
+    at screen right. One continuous shot. Stable anatomy and costumes. No speech or
+    lip movement.
+  reference_ids:
+  - ganesha
+  - kartikeya
+  - shiva
+  - parvati
+  - kailash-terrace
+  acceptance:
+  - All listed characters retain approved identity, costume and anatomy.
+  - Opening and closing states match the plan.
+  - No extra people, mangoes, limbs, captions or logos.
+- id: s02
+  start: 5
+  end: 10
+  title: Kartikeya departs
+  cast:
+  - kartikeya
+  camera: wide
+  opening_state: Kartikeya is already securely seated on one peacock on the terrace,
+    facing screen right.
+  primary_action: The peacock makes two wingbeats and lifts smoothly into the sky
+    toward screen right.
+  closing_state: Kartikeya and peacock leave frame right; no other character appears.
+  narration: Kartikeya soared away on his peacock, eager to begin.
+  events:
+  - start: 0
+    end: 1
+    action: Establish rider already seated; omit the difficult mounting action.
+  - start: 1
+    end: 4
+    action: Two clear wingbeats; takeoff follows a shallow rising arc.
+  - start: 4
+    end: 5
+    action: Keep moving right; cut before the bird becomes a tiny speck.
+  keyframe_prompt: Respectful Indian mythological storybook animation, sculpted rounded
+    forms, expressive restrained faces, hand-painted textile details, warm sunrise
+    rim light, saffron, teal and sandstone palette, cinematic depth, no photorealism.
+    Kartikeya, youthful deity with one human face and exactly two arms in this selected
+    depiction, warm brown skin, black hair, slender athletic build, teal dhoti, short
+    red shoulder sash, small gold crown, barefoot; calm courageous expression. Rides
+    one blue-green peacock; no weapons in this adaptation. Kartikeya is already securely
+    seated on one peacock on the terrace, facing screen right.
+  motion_prompt: The peacock makes two wingbeats and lifts smoothly into the sky toward
+    screen right. Kartikeya and peacock leave frame right; no other character appears.
+    One continuous shot. Stable anatomy and costumes. No speech or lip movement.
+  reference_ids:
+  - kartikeya
+  - kailash-terrace
+  acceptance:
+  - All listed characters retain approved identity, costume and anatomy.
+  - Opening and closing states match the plan.
+  - No extra people, mangoes, limbs, captions or logos.
+- id: s03
+  start: 10
+  end: 15
+  title: Ganesha understands
+  cast:
+  - ganesha
+  camera: medium
+  opening_state: Ganesha stands on the terrace, with his parents offscreen toward
+    screen left.
+  primary_action: His gaze moves from the distant sky to his parents; a small knowing
+    smile appears.
+  closing_state: He turns his shoulders toward screen left, ready to approach his
+    parents.
+  narration: Ganesha paused. Then he looked at his mother and father.
+  events:
+  - start: 0
+    end: 1.5
+    action: Eyes follow his departing brother toward screen right.
+  - start: 1.5
+    end: 3.5
+    action: Eyes and head turn slowly toward his seated parents at screen left.
+  - start: 3.5
+    end: 5
+    action: Small smile; hands relax, no lip movement.
+  keyframe_prompt: Respectful Indian mythological storybook animation, sculpted rounded
+    forms, expressive restrained faces, hand-painted textile details, warm sunrise
+    rim light, saffron, teal and sandstone palette, cinematic depth, no photorealism.
+    Ganesha, elephant-headed youthful deity, warm peach skin, broad elephant ears,
+    one trunk curling toward his own left, rounded belly, exactly two arms in this
+    selected child-story depiction, saffron dhoti with red waistband, small plain
+    gold crown, gold wrist cuffs, barefoot. No carried weapons. Keep the same tusk
+    silhouette in every shot. Ganesha stands on the terrace, with his parents offscreen
+    toward screen left.
+  motion_prompt: His gaze moves from the distant sky to his parents; a small knowing
+    smile appears. He turns his shoulders toward screen left, ready to approach his
+    parents. One continuous shot. Stable anatomy and costumes. No speech or lip movement.
+  reference_ids:
+  - ganesha
+  - kailash-terrace
+  acceptance:
+  - All listed characters retain approved identity, costume and anatomy.
+  - Opening and closing states match the plan.
+  - No extra people, mangoes, limbs, captions or logos.
+- id: s04
+  start: 15
+  end: 20
+  title: First circuit
+  cast:
+  - ganesha
+  - shiva
+  - parvati
+  camera: wide
+  opening_state: High three-quarter view. Parents remain seated in the center; Ganesha
+    starts at the front of their dais.
+  primary_action: Ganesha completes one clockwise walking circuit, keeping his parents
+    to his right.
+  closing_state: He returns to the same front marker; parents and mango remain stationary.
+  narration: With quiet devotion, he walked around them once.
+  events:
+  - start: 0
+    end: 1.25
+    action: Front to left side of image.
+  - start: 1.25
+    end: 2.5
+    action: Left side to behind the parents.
+  - start: 2.5
+    end: 3.75
+    action: Behind to right side of image.
+  - start: 3.75
+    end: 5
+    action: Right side back to front; complete exactly one circuit.
+  keyframe_prompt: Respectful Indian mythological storybook animation, sculpted rounded
+    forms, expressive restrained faces, hand-painted textile details, warm sunrise
+    rim light, saffron, teal and sandstone palette, cinematic depth, no photorealism.
+    Ganesha, elephant-headed youthful deity, warm peach skin, broad elephant ears,
+    one trunk curling toward his own left, rounded belly, exactly two arms in this
+    selected child-story depiction, saffron dhoti with red waistband, small plain
+    gold crown, gold wrist cuffs, barefoot. No carried weapons. Keep the same tusk
+    silhouette in every shot. Shiva, serene adult deity, ash-blue skin, black hair
+    in a high topknot with a small crescent moon, three horizontal white forehead
+    lines, rudraksha necklace, simple ochre lower garment, exactly two visible arms,
+    seated cross-legged. Keep a dignified calm expression. Parvati, serene adult goddess,
+    warm brown skin, long black hair partly covered by a red sari with a gold border,
+    green blouse, small red bindi, modest gold jewelry, exactly two arms, seated beside
+    Shiva. Warm attentive expression. High three-quarter view. Parents remain seated
+    in the center; Ganesha starts at the front of their dais.
+  motion_prompt: Ganesha completes one clockwise walking circuit, keeping his parents
+    to his right. He returns to the same front marker; parents and mango remain stationary.
+    One continuous shot. Stable anatomy and costumes. No speech or lip movement.
+  reference_ids:
+  - ganesha
+  - shiva
+  - parvati
+  - kailash-terrace
+  acceptance:
+  - All listed characters retain approved identity, costume and anatomy.
+  - Opening and closing states match the plan.
+  - No extra people, mangoes, limbs, captions or logos.
+  - Exactly one complete clockwise circuit; no teleportation or axis reversal.
+- id: s05
+  start: 20
+  end: 25
+  title: Second circuit
+  cast:
+  - ganesha
+  - shiva
+  - parvati
+  camera: wide
+  opening_state: Same camera, lens, parents, lighting and starting marker as s04.
+  primary_action: Ganesha completes a second clockwise circuit along the identical
+    route.
+  closing_state: He returns to the front marker after exactly two total circuits.
+  narration: A second circle. His parents watched with gentle smiles.
+  events:
+  - start: 0
+    end: 1.25
+    action: Front to image left.
+  - start: 1.25
+    end: 2.5
+    action: Image left to behind parents.
+  - start: 2.5
+    end: 3.75
+    action: Behind to image right.
+  - start: 3.75
+    end: 5
+    action: Return to front. Do not reverse direction.
+  keyframe_prompt: Respectful Indian mythological storybook animation, sculpted rounded
+    forms, expressive restrained faces, hand-painted textile details, warm sunrise
+    rim light, saffron, teal and sandstone palette, cinematic depth, no photorealism.
+    Ganesha, elephant-headed youthful deity, warm peach skin, broad elephant ears,
+    one trunk curling toward his own left, rounded belly, exactly two arms in this
+    selected child-story depiction, saffron dhoti with red waistband, small plain
+    gold crown, gold wrist cuffs, barefoot. No carried weapons. Keep the same tusk
+    silhouette in every shot. Shiva, serene adult deity, ash-blue skin, black hair
+    in a high topknot with a small crescent moon, three horizontal white forehead
+    lines, rudraksha necklace, simple ochre lower garment, exactly two visible arms,
+    seated cross-legged. Keep a dignified calm expression. Parvati, serene adult goddess,
+    warm brown skin, long black hair partly covered by a red sari with a gold border,
+    green blouse, small red bindi, modest gold jewelry, exactly two arms, seated beside
+    Shiva. Warm attentive expression. Same camera, lens, parents, lighting and starting
+    marker as s04.
+  motion_prompt: Ganesha completes a second clockwise circuit along the identical
+    route. He returns to the front marker after exactly two total circuits. One continuous
+    shot. Stable anatomy and costumes. No speech or lip movement.
+  reference_ids:
+  - ganesha
+  - shiva
+  - parvati
+  - kailash-terrace
+  acceptance:
+  - All listed characters retain approved identity, costume and anatomy.
+  - Opening and closing states match the plan.
+  - No extra people, mangoes, limbs, captions or logos.
+  - Exactly one complete clockwise circuit; no teleportation or axis reversal.
+- id: s06
+  start: 25
+  end: 30
+  title: Third circuit
+  cast:
+  - ganesha
+  - shiva
+  - parvati
+  camera: wide
+  opening_state: Same camera and starting marker as s04; two circuits have already
+    finished.
+  primary_action: Ganesha completes the third clockwise circuit and comes to rest
+    in front.
+  closing_state: Exactly three total circuits completed; Ganesha faces his parents.
+  narration: A third circle. Ganesha stopped before them.
+  events:
+  - start: 0
+    end: 1.25
+    action: Front to image left.
+  - start: 1.25
+    end: 2.5
+    action: Image left to behind parents.
+  - start: 2.5
+    end: 3.75
+    action: Behind to image right.
+  - start: 3.75
+    end: 4.75
+    action: Return to front.
+  - start: 4.75
+    end: 5
+    action: Settle both feet; do not begin a fourth circuit.
+  keyframe_prompt: Respectful Indian mythological storybook animation, sculpted rounded
+    forms, expressive restrained faces, hand-painted textile details, warm sunrise
+    rim light, saffron, teal and sandstone palette, cinematic depth, no photorealism.
+    Ganesha, elephant-headed youthful deity, warm peach skin, broad elephant ears,
+    one trunk curling toward his own left, rounded belly, exactly two arms in this
+    selected child-story depiction, saffron dhoti with red waistband, small plain
+    gold crown, gold wrist cuffs, barefoot. No carried weapons. Keep the same tusk
+    silhouette in every shot. Shiva, serene adult deity, ash-blue skin, black hair
+    in a high topknot with a small crescent moon, three horizontal white forehead
+    lines, rudraksha necklace, simple ochre lower garment, exactly two visible arms,
+    seated cross-legged. Keep a dignified calm expression. Parvati, serene adult goddess,
+    warm brown skin, long black hair partly covered by a red sari with a gold border,
+    green blouse, small red bindi, modest gold jewelry, exactly two arms, seated beside
+    Shiva. Warm attentive expression. Same camera and starting marker as s04; two
+    circuits have already finished.
+  motion_prompt: Ganesha completes the third clockwise circuit and comes to rest in
+    front. Exactly three total circuits completed; Ganesha faces his parents. One
+    continuous shot. Stable anatomy and costumes. No speech or lip movement.
+  reference_ids:
+  - ganesha
+  - shiva
+  - parvati
+  - kailash-terrace
+  acceptance:
+  - All listed characters retain approved identity, costume and anatomy.
+  - Opening and closing states match the plan.
+  - No extra people, mangoes, limbs, captions or logos.
+  - Exactly one complete clockwise circuit; no teleportation or axis reversal.
+- id: s07
+  start: 30
+  end: 35
+  title: The meaning
+  cast:
+  - ganesha
+  camera: medium
+  opening_state: Ganesha faces his parents just offscreen, both feet still.
+  primary_action: He brings his palms together in a respectful namaste and inclines
+    his head.
+  closing_state: Namaste held; crown, trunk and hands remain stable.
+  narration: For Ganesha, his parents were his whole world.
+  events:
+  - start: 0
+    end: 1
+    action: Hold warm eye contact toward the parents.
+  - start: 1
+    end: 3
+    action: Bring hands together below the trunk, without finger interpenetration.
+  - start: 3
+    end: 5
+    action: Small bow and peaceful hold; no lip sync.
+  keyframe_prompt: Respectful Indian mythological storybook animation, sculpted rounded
+    forms, expressive restrained faces, hand-painted textile details, warm sunrise
+    rim light, saffron, teal and sandstone palette, cinematic depth, no photorealism.
+    Ganesha, elephant-headed youthful deity, warm peach skin, broad elephant ears,
+    one trunk curling toward his own left, rounded belly, exactly two arms in this
+    selected child-story depiction, saffron dhoti with red waistband, small plain
+    gold crown, gold wrist cuffs, barefoot. No carried weapons. Keep the same tusk
+    silhouette in every shot. Ganesha faces his parents just offscreen, both feet
+    still.
+  motion_prompt: He brings his palms together in a respectful namaste and inclines
+    his head. Namaste held; crown, trunk and hands remain stable. One continuous shot.
+    Stable anatomy and costumes. No speech or lip movement.
+  reference_ids:
+  - ganesha
+  - kailash-terrace
+  acceptance:
+  - All listed characters retain approved identity, costume and anatomy.
+  - Opening and closing states match the plan.
+  - No extra people, mangoes, limbs, captions or logos.
+- id: s08
+  start: 35
+  end: 40
+  title: Kartikeya returns
+  cast:
+  - kartikeya
+  camera: medium
+  opening_state: Kartikeya stands on the terrace again, peacock stationary behind
+    his right shoulder.
+  primary_action: He looks toward Ganesha offscreen left; surprise softens into a
+    respectful smile.
+  closing_state: Kartikeya offers one small nod; peacock remains behind him.
+  narration: Returning, Kartikeya understood what his brother had seen.
+  events:
+  - start: 0
+    end: 1.5
+    action: Establish landing already complete; matching costume and peacock.
+  - start: 1.5
+    end: 3.5
+    action: Eyes widen slightly, then expression softens.
+  - start: 3.5
+    end: 5
+    action: One respectful nod, no anger or humiliation.
+  keyframe_prompt: Respectful Indian mythological storybook animation, sculpted rounded
+    forms, expressive restrained faces, hand-painted textile details, warm sunrise
+    rim light, saffron, teal and sandstone palette, cinematic depth, no photorealism.
+    Kartikeya, youthful deity with one human face and exactly two arms in this selected
+    depiction, warm brown skin, black hair, slender athletic build, teal dhoti, short
+    red shoulder sash, small gold crown, barefoot; calm courageous expression. Rides
+    one blue-green peacock; no weapons in this adaptation. Kartikeya stands on the
+    terrace again, peacock stationary behind his right shoulder.
+  motion_prompt: He looks toward Ganesha offscreen left; surprise softens into a respectful
+    smile. Kartikeya offers one small nod; peacock remains behind him. One continuous
+    shot. Stable anatomy and costumes. No speech or lip movement.
+  reference_ids:
+  - kartikeya
+  - kailash-terrace
+  acceptance:
+  - All listed characters retain approved identity, costume and anatomy.
+  - Opening and closing states match the plan.
+  - No extra people, mangoes, limbs, captions or logos.
+- id: s09
+  start: 40
+  end: 45
+  title: The reward
+  cast:
+  - ganesha
+  - shiva
+  - parvati
+  camera: medium
+  opening_state: Ganesha is seated before his parents, the single mango already resting
+    in his cupped hands. The pedestal is visibly empty.
+  primary_action: Parvati gives a small blessing gesture while Ganesha gazes at the
+    mango, then up at his parents.
+  closing_state: Hold the warm family composition; exactly one mango remains in Ganesha’s
+    hands.
+  narration: The mango went to Ganesha. Wisdom had found another way.
+  events:
+  - start: 0
+    end: 1
+    action: 'Explicit editorial ellipsis: award occurred between cuts; no generated
+      handoff.'
+  - start: 1
+    end: 3
+    action: Parvati raises an open palm; Ganesha looks up.
+  - start: 3
+    end: 5
+    action: Hold the payoff; music resolves, no new props or fourth circuit.
+  keyframe_prompt: Respectful Indian mythological storybook animation, sculpted rounded
+    forms, expressive restrained faces, hand-painted textile details, warm sunrise
+    rim light, saffron, teal and sandstone palette, cinematic depth, no photorealism.
+    Ganesha, elephant-headed youthful deity, warm peach skin, broad elephant ears,
+    one trunk curling toward his own left, rounded belly, exactly two arms in this
+    selected child-story depiction, saffron dhoti with red waistband, small plain
+    gold crown, gold wrist cuffs, barefoot. No carried weapons. Keep the same tusk
+    silhouette in every shot. Shiva, serene adult deity, ash-blue skin, black hair
+    in a high topknot with a small crescent moon, three horizontal white forehead
+    lines, rudraksha necklace, simple ochre lower garment, exactly two visible arms,
+    seated cross-legged. Keep a dignified calm expression. Parvati, serene adult goddess,
+    warm brown skin, long black hair partly covered by a red sari with a gold border,
+    green blouse, small red bindi, modest gold jewelry, exactly two arms, seated beside
+    Shiva. Warm attentive expression. Ganesha is seated before his parents, the single
+    mango already resting in his cupped hands. The pedestal is visibly empty.
+  motion_prompt: Parvati gives a small blessing gesture while Ganesha gazes at the
+    mango, then up at his parents. Hold the warm family composition; exactly one mango
+    remains in Ganesha’s hands. One continuous shot. Stable anatomy and costumes.
+    No speech or lip movement.
+  reference_ids:
+  - ganesha
+  - shiva
+  - parvati
+  - kailash-terrace
+  acceptance:
+  - All listed characters retain approved identity, costume and anatomy.
+  - Opening and closing states match the plan.
+  - No extra people, mangoes, limbs, captions or logos.

@@ -1,0 +1,100 @@
+schema_version: 1
+project:
+  name: spark-video-factory
+  mode: development
+  timezone: Europe/London
+  output_root: ./runs/fixtures
+  database_path: ./state/fixtures.sqlite3
+  model_cache: ./models/svf
+  asset_root: ./assets
+providers:
+  text:
+    adapter: local_transformers
+    model_id: Qwen/Qwen3-8B
+    revision: b968826d9c46dd6066d109eabc6255188de91218
+    enabled: true
+  image:
+    adapter: local_diffusers
+    model_id: stabilityai/stable-diffusion-xl-base-1.0
+    revision: 462165984030d82259a11f4367a4eed129e94a7b
+    enabled: true
+  video:
+    adapter: wan
+    model_id: Wan-AI/Wan2.2-TI2V-5B
+    revision: null
+    enabled: false
+    capability_profile: null
+  controlled:
+    adapter: scene_interpreter
+    enabled: true
+  audio:
+    adapter: procedural_and_licensed
+    speech_enabled: false
+  visual_critic:
+    enabled: false
+production:
+  primary_renderer: controlled
+  allow_i2v: false
+  paid_generation_allowed: false
+  max_shots_per_episode: 7
+  max_candidates_per_shot: 3
+  max_schema_repairs: 2
+  max_infrastructure_retries: 2
+  max_oom_fallbacks: 1
+  storyboard_review_required: true
+  final_review_required: true
+  default_seed: 42
+delivery:
+  width: 180
+  height: 320
+  fps: 12
+  video_codec: h264
+  audio_codec: aac
+  preserve_native_render_metadata: true
+  captions:
+    enabled: false
+    sidecar: true
+    safe_area_profile: vertical_default
+resources:
+  gpu_concurrency: 1
+  cpu_workers: 2
+  min_available_system_ram_gib: 20
+  min_free_disk_gib: 100
+  gpu_job_timeout_minutes: 60
+  lease_seconds: 120
+  heartbeat_seconds: 20
+  downloads:
+    enabled: true
+    max_total_gib: 30
+nightly:
+  enabled: false
+  start_local: '23:00'
+  stop_local: 07:00
+  max_wall_hours: 8
+  max_gpu_hours: 6
+  max_episodes: 3
+  stop_admitting_before_end_minutes: 30
+  finish_inflight_within_hard_deadline: true
+costs:
+  currency: GBP
+  max_external_generation_spend_per_run: 0
+  electricity_gbp_per_kwh: null
+  operator_gbp_per_hour: null
+  hardware_allocation_gbp_per_episode: null
+  energy_source: unavailable
+publishing:
+  enabled: false
+  primary_platform: youtube
+  upload_default_visibility: private
+  require_explicit_publish_action: true
+  platforms_export_only:
+  - instagram
+  - facebook
+  - tiktok
+  - snapchat
+analytics:
+  input: csv
+  snapshot_hours_after_publication:
+  - 24
+  - 168
+  missing_metrics: null
